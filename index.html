@@ -3,9 +3,37 @@
   <head>
     <title>Vanilla Challenge</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
 
-  <body>
-    <h1>Hi</hi>
+  <body id="body">
+    <div>
+      <div>
+        <h1 class="date" id="dateView"></h1>
+      </div>
+      <div>
+        <h1 class="clock" id="clockView"></h1>
+      </div>
+      <div>
+        <h1 id="weatherView"></h1>
+      </div>
+      <form id="login-form">
+        <h1 class="hidden"></h1>
+        <input type="text" id="user" placeholder="아이디를 입력 후 Login 버튼을 클릭하세요!." required />
+        <div id="btnGroup">
+          <input type="submit" id="btnLogin" value="Login" />
+        </div>
+      </form>
+      <form id="todo-form">
+        <input type="text" placeholder="할 일을 입력 후 리턴키를 클릭하세요!." required />
+      </form>
+      <ul id="todo-list"></ul>
+
+      <div id="quote">
+        <span class="fnt"></span>
+        <span></span>
+      </div>
+    </div>
+    <script src="./js/app.js"></script>
   </body>
 </html>
