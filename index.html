@@ -19,9 +19,12 @@
       </div>
       <form id="login-form">
         <h1 class="hidden"></h1>
-        <input type="text" id="user" placeholder="아이디를 입력 후 Login 버튼을 클릭하세요!." required />
+        <div id="inputGroup">
+          <input type="text" id="user" placeholder="아이디를 입력 후 로그인 버튼을 클릭하세요!." required />
+        </div>
         <div id="btnGroup">
-          <input type="submit" id="btnLogin" value="Login" />
+          <button id="btnLogin">로그인</button> 
+          <button id="btnLogout">로그아웃</button>
         </div>
       </form>
       <form id="todo-form">

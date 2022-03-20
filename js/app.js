@@ -172,6 +172,7 @@ loadCoords();
 const formUser = document.querySelector("#login-form");
 const inputName = formUser.querySelector("#user");
 const loginBtn = formUser.querySelector("#btnLogin");
+const logoutBtn = formUser.querySelector("#btnLogout");
 const h1tag = formUser.querySelector("h1");
 
 
@@ -190,13 +191,23 @@ function handleSubmit(e) {
     saveUser(val);
 }
 
+function handleLogout(e) {
+    e.preventDefault();
+    
+    localStorage.removeItem("user");
+    loginUser();
+    alert("로그아웃되었습니다.");
+}
+
 
 function reqUser() {    
     h1tag.innerText = "";
     h1tag.classList.remove("hidden");
-
     inputName.classList.remove("hidden");
     loginBtn.classList.remove("hidden");
+
+    logoutBtn.classList.add("hidden");
+
     inputName.value = "";
     formUser.addEventListener("submit", handleSubmit);
 }
@@ -206,6 +217,9 @@ function viewUser(text) {
     h1tag.classList.remove("hidden");
     inputName.classList.add("hidden");
     loginBtn.classList.add("hidden");
+
+    logoutBtn.classList.remove("hidden");
+    logoutBtn.addEventListener("click", handleLogout);
 
 }
 
